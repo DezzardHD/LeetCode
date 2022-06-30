@@ -7,8 +7,6 @@ class Solution {
             rn = rn * 10 + n % 10;
             n = n / 10;
         }
-        System.out.println(rn);
-        System.out.println(n);
         return rn == x;    
     }
 }
