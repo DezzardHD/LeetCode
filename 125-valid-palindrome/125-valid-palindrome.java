@@ -3,6 +3,7 @@ class Solution {
         char[] chars = s.toCharArray();
         String s1 = "";
         String s2 = "";
+        s = s.replaceAll("\\s+","");
         for (char c : chars){
             if (Character.isLetterOrDigit(c)){
                 s1 += c;
