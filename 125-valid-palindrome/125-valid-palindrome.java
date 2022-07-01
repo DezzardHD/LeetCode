@@ -4,12 +4,10 @@ class Solution {
         int a = 0;
         int tInner = s.length() - 1;
         for (int i = 0; i < s.length(); i++){
-            char c1 = s.charAt(i);
-            if (Character.isLetterOrDigit(c1)){
+            if (Character.isLetterOrDigit(s.charAt(i))){
                 for (int j = tInner; j > 0; j--){
-                    char c2 = s.charAt(j);
-                    if (Character.isLetterOrDigit(c2)){
-                        if (Character.toLowerCase(c1) == Character.toLowerCase(c2)){
+                    if (Character.isLetterOrDigit(s.charAt(j))){
+                        if (Character.toLowerCase(s.charAt(i)) == Character.toLowerCase(s.charAt(j))){
                             tInner = j - 1;
                             break;
                         }else{
