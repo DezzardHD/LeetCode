@@ -15,8 +15,6 @@ class Solution {
                 hm2.put(t.charAt(i), 1);
             }
         }
-        System.out.println(hm1);
-        System.out.println(hm2);
         return hm1.equals(hm2);
     }
 }
