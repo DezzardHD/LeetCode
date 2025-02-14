@@ -3,6 +3,12 @@ use std::iter::FromIterator;
 
 impl Solution {
     pub fn contains_duplicate(nums: Vec<i32>) -> bool {
-        nums.len() != HashSet::<i32>::from_iter(nums).len()
+        let mut set = HashSet::<i32>::with_capacity(nums.len());
+        for num in nums.into_iter() {
+            if (!set.insert(num)) {
+                return true
+            }
+        }
+        false
     }
 }
