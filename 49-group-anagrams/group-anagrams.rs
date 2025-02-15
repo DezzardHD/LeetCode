@@ -9,9 +9,7 @@ impl Solution {
             let mut v: Vec<i32> = vec![0; 26];
             for c in s.chars() {
                 v[(u32::from(c) - u32::from('a')) as usize] += 1;
-                println!("{}", c);
             }
-            println!("{:?}", v);
             if let Some(list) = map.get_mut(&v) {
                 list.push(s);
             } else {
@@ -20,7 +18,6 @@ impl Solution {
             
 
         }
-        println!("{:?}", map);
         map.into_values().collect()
     }
 }
