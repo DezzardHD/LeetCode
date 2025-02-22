@@ -7,7 +7,6 @@ impl Solution {
     }
 
     fn next(n: i32, s: &mut Vec<String>, r: &mut Vec<String>, open: i32, close: i32) {
-         println!("{:?}", s);
          if close > open || open > n || close > n {
             // invalid
             return
