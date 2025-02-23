@@ -12,10 +12,6 @@ impl Solution {
                 count = count + 1;            
                 time = curr_time;
             }
-            
-            println!("_{:?}", car);
-            println!("{}", time);
-            println!("{}", count);
         }
         count
     }
