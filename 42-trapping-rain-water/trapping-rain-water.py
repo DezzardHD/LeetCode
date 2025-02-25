@@ -25,7 +25,6 @@ class Solution:
 
         for i in range(0, len(suffix) - 1):
             for ix in range(suffix[i] - 1, suffix[i + 1], -1):
-                print(ix)
                 area += height[suffix[i]] - height[ix]
 
         return area
