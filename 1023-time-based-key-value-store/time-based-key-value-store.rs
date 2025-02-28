@@ -40,11 +40,13 @@ impl TimeMap {
         while l <= r {
             let m: i32 = (r - l) / 2 + l;
             if v[m as usize].0 <= timestamp {
-                res = v[m as usize].1.clone();
                 l = m + 1;
             } else {
                 r = m - 1;
             }
+        }
+        if r != -1 {
+            res = v[r as usize].1.clone(); 
         }
         res
     }
