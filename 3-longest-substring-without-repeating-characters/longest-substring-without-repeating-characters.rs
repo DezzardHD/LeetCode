@@ -7,14 +7,12 @@ impl Solution {
         let mut start: i32 = 0;
         let mut maximum: i32 = 0;
         for (i, c) in s.chars().into_iter().enumerate() {
-            println!("{}", i);
             if let Some(v) = map.get(&c) {
                 start = max(start, map.get(&c).unwrap() + 1);
             }
             map.insert(c, i as i32);
             maximum = max(i as i32 + 1 - start, maximum);
         }
-
         return maximum
     }
 }
