@@ -8,7 +8,7 @@ class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         def valid(node, left, right):
             if not node:
-                return True # when we reached the end of the current "path" without encoutering an invalid branch
+                return True
 
             if not(left < node.val < right):
                 return False
