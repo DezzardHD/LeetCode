@@ -20,7 +20,6 @@ class Codec:
             preorder(node.right)
             return
         preorder(root)
-        print(res)
         return res
 
     # Decodes your encoded data to tree.
@@ -33,10 +32,8 @@ class Codec:
                 return None, idx + 1
             node = TreeNode(arr[idx])
             idx += 1
-            # print("arr[{}]: {}, node.val: {}".format(idx, arr[idx], node.val))
             node.left, idx = preorder_build(idx)
             node.right, idx = preorder_build(idx)
-            print("node[{}][{},{}]".format(node.val, node.left.val if node.left else "N", node.right.val if node.right else "N"))
             return node, idx
         root, idx = preorder_build(1)
         return root
