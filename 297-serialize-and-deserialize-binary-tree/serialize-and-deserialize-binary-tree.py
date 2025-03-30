@@ -13,12 +13,12 @@ class Codec:
         preorder(root)
         return res
     def deserialize(self, data: str) -> Optional[TreeNode]:
-        arr = [None if not x else int(x) for x in data.split("#")]
+        arr = data.split("#")
         def preorder_build(idx: int) -> (Optional[TreeNode], int):
             nonlocal arr
-            if len(arr) <= idx or None == arr[idx]:
+            if len(arr) <= idx or not arr[idx]:
                 return None, idx + 1
-            node = TreeNode(arr[idx])
+            node = TreeNode(int(arr[idx]))
             idx += 1
             node.left, idx = preorder_build(idx)
             node.right, idx = preorder_build(idx)
