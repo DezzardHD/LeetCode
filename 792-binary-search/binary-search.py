@@ -1,9 +1,9 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        l = 0
-        r = len(nums) - 1
+        l, r = 0, len(nums) - 1
+        mid = 0
         while l <= r:
-            mid = floor((r - l) / 2) + l
+            mid = (l + r) // 2
             if target > nums[mid]:
                 l = mid + 1
             elif target < nums[mid]:
