@@ -3,8 +3,6 @@ class Solution:
         score = [(value, index) for index, value in enumerate(score)]
         score.sort()
         res = [0] * len(score)
-        print(score)
-        print(res)
         for i in range(len(score) - 1, -1, -1):
             if len(score) - i < 4:
                 if len(score) - i == 1:
