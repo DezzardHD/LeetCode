@@ -9,7 +9,6 @@ class Solution(object):
         if n % 2 == 1:
             return False
         while n > 2:
-            print(n)
             n = n / 2.0
         if n == 2:
             return True
