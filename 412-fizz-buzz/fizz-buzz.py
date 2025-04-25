@@ -12,7 +12,7 @@ class Solution(object):
                 tmp += "Fizz"
             if val % 5 == 0:
                 tmp += "Buzz"
-            if tmp == "":
+            if len(tmp) == 0:
                 res.append(str(val))
             else:
                 res.append(tmp)
